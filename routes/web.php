@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', [TestController::class, 'index']);
+Route::get('/', [CategoryController::class, 'index'])->name('all_categories');
+Route::get('/products', [ProductController::class, 'index'])->name('all_products');
