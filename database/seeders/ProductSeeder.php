@@ -30,6 +30,7 @@ class ProductSeeder extends Seeder
             'description' => "Описание товара $count: $faker->realText",
             'quantity' => $faker->numberBetween(1, 100),
             'active' => true,
+            'category_id' => $faker->numberBetween(1, 5),
         ]);
     }
 }

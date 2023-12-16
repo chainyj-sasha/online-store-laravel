@@ -1,8 +1,9 @@
 @extends('layouts.main')
 
-@section('title', 'Все товары')
+@section('title', 'Товары категории ' . $category)
 
 @section('content')
+
     <div class="container">
         <div class="starter-template">
 
@@ -29,4 +30,5 @@
             </div>
         </div>
     </div>
+
 @endsection

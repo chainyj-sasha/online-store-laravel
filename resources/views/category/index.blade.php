@@ -1,17 +1,23 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Список категорий</title>
-</head>
-<body>
+@extends('layouts.main')
 
-@foreach($categories as $category)
-    <p>{{ $category->name }}</p>
-@endforeach
+@section('title', 'Все категории')
 
-</body>
-</html>
+@section('content')
+
+    <div class="container">
+        <div class="starter-template">
+            @foreach($categories as $category)
+                <div class="panel">
+                    <a href="{{ route('products_by_category', ['categoryId'=>$category->id]) }}">
+                        <img src="iphone.jpg">
+                        <h2>{{ $category->name }}</h2>
+                    </a>
+                    <p>
+                        Описание категории товаров
+                    </p>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+@endsection

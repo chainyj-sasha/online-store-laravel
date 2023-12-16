@@ -21,7 +21,7 @@ class CategorySeeder extends Seeder
         }
     }
 
-    private function addCategory(int $count)
+    private function addCategory(int $count): void
     {
         Category::create([
            'name' => "Категория $count"
