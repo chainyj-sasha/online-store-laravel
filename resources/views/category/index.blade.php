@@ -9,7 +9,7 @@
             @foreach($categories as $category)
                 <div class="panel">
                     <a href="{{ route('products_by_category', ['categoryId'=>$category->id]) }}">
-                        <img src="iphone.jpg">
+                        <img src="{{ asset('storage/' . $category->image) }}">
                         <h2>{{ $category->name }}</h2>
                     </a>
                     <p>

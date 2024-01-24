@@ -36,4 +36,14 @@ class ProductController extends Controller
             'category' => $category,
         ]);
     }
+
+    public function basket()
+    {
+        return view('basket');
+    }
+
+    public function order()
+    {
+        return view('order');
+    }
 }
